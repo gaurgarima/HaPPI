@@ -1,6 +1,3 @@
 # HaPPI
-description
-Setup directory structure, download data files and recreate
-script: to compile, run, computation: HaPPI, C2D, maintenance, one more file for adaptive
-Requirement: Download C2D
-Data link
+A framework to support provenance-aware query computation over probabilistic knowledge graphs with the capability of providing fine-grained provenance of
+the probability computaiton.
