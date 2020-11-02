@@ -26,17 +26,14 @@ our proposed symbolic expression computation method (HaPPI) and knowledge compil
 
 1. Using both the posWorld and HaPPI methodology together for the probability computation
 ```
-javac HappiQueryExecutor.java
 java HappiQueryExecutor <dataset> <run>
 ```
 2. To run C2D compiler to translate a given Boolean formula to a d-DNNF formula and further to evaluate the probability using the compiled form,
 ```
-javac TseytinTransformation.java
 java TseytinTransformation c2d <dataset> <run>
 ```
 ### Probability maintenance under edge insertion operations,
 ```
-javac UpdateMaintenance.java
 java UpdateMaintenance <dataset> insertion <run>
 ```
 
