@@ -38,8 +38,8 @@ public class TseytinTransformation {
 		dataset = args[1];
 		run = args[2];
 
-		File folder = new File("./polyfiles/"+dataset+"/");
-    	      	
+	//	File folder = new File("./polyfiles/"+dataset+"/");
+    	 File folder = new File("/meta/"+dataset+"/result/");  	
 	    for (File file: folder.listFiles()) {
 	
     		if(file.isDirectory())
@@ -58,7 +58,8 @@ public class TseytinTransformation {
 		BufferedReader br = new BufferedReader(new FileReader(new File("./polyfiles/"+dataset+"/"+qId+".txt")));
 		String line = "";
 		String poly = "";
-		FileWriter fw = new FileWriter("./executionTime/"+tool+"/"+dataset+"/complete_run"+run+"/"+qId+".txt"); //todo: correct filename
+		//FileWriter fw = new FileWriter("./executionTime/"+tool+"/"+dataset+"/complete_run"+run+"/"+qId+".txt"); //todo: correct filename
+		FileWriter fw = new FileWriter("./experiment/"+dataset+"/"+tool+"/run"+run+"/"+qId+".txt"); 
 		PrintWriter pw = new PrintWriter(fw);
 		int count = 0;
 		HashMap<HashMap<HashSet<String>,Integer>,Integer> temp;
