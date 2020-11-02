@@ -4,12 +4,12 @@ the probability computaiton.
 
 ## Prerequisite Installation
 
-* Download the knowledge compilation tool C2D compiler using the line (http://reasoning.cs.ucla.edu/c2d/)
+* Download the knowledge compilation tool C2D compiler using the link (http://reasoning.cs.ucla.edu/c2d/)
 
 ## Setup
 
 * Download and unzip data files: gMark answer set and YAGO2 answer set from (tbd) and place them in the project HOME folder
-* Setup directories for both the datasets and compile the code,
+* Run the following commnads to setup the directory structure and compile the code,
 ```
 ./setup.sh
 ./compile.sh
@@ -18,7 +18,7 @@ the probability computaiton.
 ## Usage
 
 We measured the performance of HaPPI using two datasets <dataset>, gmark and yago, over multiple runs <run>.
-To compute the probability of each answer of a query result set, any one of the three approaches can be employed -- possible world computation(PosWorld),
+To compute the probability of each answer of a query result set, any one of the three approaches can be employed -- possible world computation (PosWorld),
 our proposed symbolic expression computation method (HaPPI) and knowledge compilation (using C2D compiler).
 
 
@@ -32,12 +32,22 @@ java HappiQueryExecutor <dataset> <run>
 ```
 java TseytinTransformation c2d <dataset> <run>
 ```
-### Probability maintenance under edge insertion operations,
+### Probability maintenance under edge insertion operations
 ```
 java UpdateMaintenance <dataset> insertion <run>
 ```
 
-## Experimental Results
+## HaPPI performance assessment
+
+We measured the time taken to compute the probaiblity via symbolic expression construction and also
+the time taken to update each answer of query qID using the incremental maintenance approach of HaPPI. 
+For experiemntal purpose, the performance of HaPPI over 10 runs can using the following commands,
+
+```
+./happi.sh <dataset> <qId>
+./update.sh <dataset> <qId>
+```
+We can combine the runtime of each query over 10 runs into a single file under the following setups,
 
 1. For each query qId, collate the total probability computation time per answer taken by the Brute-force possible world computation and HaPPI,
 ```
